@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Intelligence - Market Intelligence SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/js/auth.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <span class="font-bold text-blue-600 text-2xl tracking-tight">Agentic Intelligence</span>
+                </a>
+                <div class="flex items-center space-x-3">
+                    <span id="username" class="text-gray-500"></span>
+                    <button onclick="logout()"
+                        class="py-2 px-4 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Market Intelligence, <span
+                    class="text-blue-600">Reimagined</span></h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-8">Agentic Intelligence is your all-in-one SaaS platform for
+                automated market data collection, deep analysis, and actionable business insights. Empower your team
+                with real-time intelligence and AI-driven reports—no manual work required.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-6">
+                <a href="/scraper"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">Start
+                    Scraping</a>
+                <a href="/analysis"
+                    class="bg-white border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold shadow hover:bg-blue-50 transition">View
+                    Analysis</a>
+                <a href="/qa"
+                    class="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-purple-700 transition">Q&amp;A
+                    Bot</a>
+                <a href="/reports"
+                    class="bg-white border border-yellow-500 text-yellow-600 px-8 py-3 rounded-lg font-semibold shadow hover:bg-yellow-50 transition">Generate
+                    Report</a>
+            </div>
+            <div class="flex justify-center gap-6 mt-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-700 font-medium">No code required</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+                    </svg>
+                    <span class="text-gray-700 font-medium">AI-powered insights</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+                    </svg>
+                    <span class="text-gray-700 font-medium">Instant reports</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Platform Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                </svg>
+                <h3 class="font-semibold text-lg mb-2">Automated Data Scraping</h3>
+                <p class="text-gray-600">Collect product and market data from multiple e-commerce sources with a single
+                    click. No manual copy-paste.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+                <svg class="w-12 h-12 text-green-500 mb-4" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2v-6a2 2 0 00-2-2h-2a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                </svg>
+                <h3 class="font-semibold text-lg mb-2">Deep Market Analysis</h3>
+                <p class="text-gray-600">Leverage advanced AI to analyze trends, compare products, and uncover
+                    actionable insights from your data.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+                <svg class="w-12 h-12 text-yellow-500 mb-4" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1h-6a1 1 0 00-1 1v9" />
+                </svg>
+                <h3 class="font-semibold text-lg mb-2">Executive Reports</h3>
+                <p class="text-gray-600">Generate and download business-ready reports for stakeholders and
+                    decision-makers, instantly.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
+                <svg class="w-12 h-12 text-purple-500 mb-4" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75" />
+                </svg>
+                <h3 class="font-semibold text-lg mb-2">Q&A Chatbot</h3>
+                <p class="text-gray-600">Ask questions about your market data and get instant, AI-generated answers in
+                    natural language.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-blue-600 py-12">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to transform your market intelligence
+                workflow?</h2>
+            <p class="text-blue-100 mb-8">Sign in, start scraping, and unlock actionable insights for your business
+                today.</p>
+            <a href="/scraper"
+                class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-blue-50 transition">Get
+                Started</a>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="max-w-6xl mx-auto py-12 px-4">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">Quick Access</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/scraper"
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow flex flex-col items-start">
+                <h3 class="text-lg font-semibold mb-2 text-blue-600">Data Scraper</h3>
+                <p class="text-gray-600 mb-2">Collect product data from e-commerce sites</p>
+                <span class="text-blue-500 font-medium mt-auto">Start Scraping &rarr;</span>
+            </a>
+            <a href="/analysis"
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow flex flex-col items-start">
+                <h3 class="text-lg font-semibold mb-2 text-green-600">Market Analysis</h3>
+                <p class="text-gray-600 mb-2">Analyze market trends and insights</p>
+                <span class="text-green-500 font-medium mt-auto">View Analysis &rarr;</span>
+            </a>
+            <a href="/qa"
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow flex flex-col items-start">
+                <h3 class="text-lg font-semibold mb-2 text-purple-600">Q&A Bot</h3>
+                <p class="text-gray-600 mb-2">Ask questions about market data</p>
+                <span class="text-purple-500 font-medium mt-auto">Ask Questions &rarr;</span>
+            </a>
+            <a href="/reports"
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow flex flex-col items-start">
+                <h3 class="text-lg font-semibold mb-2 text-yellow-600">Reports</h3>
+                <p class="text-gray-600 mb-2">View and download generated reports</p>
+                <span class="text-yellow-500 font-medium mt-auto">View Reports &rarr;</span>
+            </a>
+        </div>
+        <div class="mt-8 text-center">
+            <a href="/history" class="text-blue-500 hover:text-blue-600 font-medium">View Job History &rarr;</a>
+        </div>
+    </section>
+
+    <script>
+        // Check authentication and update username
+        checkAuth();
+    </script>
+</body>
+
+</html>

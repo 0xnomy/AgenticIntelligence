@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Agentic Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/reports.js" defer></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4">
+                        <span class="font-semibold text-gray-500 text-lg">Agentic Intelligence</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span id="username" class="text-gray-500"></span>
+                    <button onclick="logout()"
+                        class="py-2 px-4 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <svg class="w-8 h-8 text-blue-500 mr-3" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2v-6a2 2 0 00-2-2h-2a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                </svg>
+                <h1 class="text-2xl font-bold">Business Intelligence Reports</h1>
+            </div>
+            <p class="mb-6 text-gray-600">Generate and review comprehensive business reports based on the latest market
+                analysis. These reports are designed for executive decision-making and include actionable insights,
+                trends, and recommendations.</p>
+
+            <!-- Generate Report Button -->
+            <div class="mb-6 flex gap-4 items-center">
+                <button id="generateReportBtn"
+                    class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                    Generate New Report
+                </button>
+                <button id="downloadReportBtn"
+                    class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 hidden flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5" />
+                    </svg>
+                    Download Report
+                </button>
+            </div>
+
+            <!-- Latest Report Section -->
+            <div id="reportSection" class="hidden mb-8">
+                <h2 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                    </svg>
+                    Latest Business Report
+                </h2>
+                <div id="reportContent"
+                    class="bg-gray-50 p-6 rounded-lg whitespace-pre-line prose max-w-none border border-gray-200 shadow-inner">
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-400 rounded">
+                <h3 class="font-semibold text-blue-700 mb-2">How does this work?</h3>
+                <ul class="list-disc pl-6 text-blue-800">
+                    <li>Click <b>Generate New Report</b> to create a business report from the latest market analysis.
+                    </li>
+                    <li>Review the report for executive summary, key findings, trends, and recommendations.</li>
+                    <li>Download the report for sharing or further analysis.</li>
+                </ul>
+            </div>
+
+            <!-- Error Section -->
+            <div id="errorSection" class="hidden mt-4">
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

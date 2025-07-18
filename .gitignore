@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Data and output
+/data/
+!data/*.md
+!data/*.txt
+
+# SQLite DB
+*.db
+*.sqlite3
+
+# Playwright
+playwright/.cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Mac/Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (if any frontend tooling)
+node_modules/
+
+# Coverage
+htmlcov/
+.coverage
+.tox/
+
+# Misc
+*.bak
+*.swp 

@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+langchain-community
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+python-multipart
+jinja2
+aiofiles
+playwright
+tqdm

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis - Agentic Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/analysis.js" defer></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4">
+                        <span class="font-semibold text-gray-500 text-lg">Agentic Intelligence</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span id="username" class="text-gray-500"></span>
+                    <button onclick="logout()"
+                        class="py-2 px-4 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold mb-6">Market Analysis</h1>
+
+            <!-- Analysis Form -->
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Start New Analysis</h2>
+                <div class="flex gap-4">
+                    <button id="startAnalysis" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+                        Start Analysis
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progressSection" class="hidden mb-8">
+                <h2 class="text-xl font-semibold mb-4">Analysis Progress</h2>
+                <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div id="progressBar" class="bg-blue-500 h-4 rounded-full" style="width: 0%"></div>
+                </div>
+                <p id="statusMessage" class="mt-2 text-gray-600"></p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="hidden">
+                <h2 class="text-xl font-semibold mb-4">Analysis Results</h2>
+                <div id="analysisResults" class="bg-gray-50 p-4 rounded-lg whitespace-pre-wrap"></div>
+                <button id="downloadReport" class="mt-4 bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
+                    Download Report
+                </button>
+            </div>
+
+            <!-- Error Section -->
+            <div id="errorSection" class="hidden">
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

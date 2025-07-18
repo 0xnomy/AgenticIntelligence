@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Chatbot - Agentic Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/qa.js" defer></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4">
+                        <span class="font-semibold text-gray-500 text-lg">Agentic Intelligence</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span id="username" class="text-gray-500"></span>
+                    <button onclick="logout()"
+                        class="py-2 px-4 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-2xl font-bold mb-6">Market Intelligence Q&A</h1>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="mb-6 h-96 overflow-y-auto bg-gray-50 p-4 rounded-lg">
+                <div class="space-y-4">
+                    <!-- Messages will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Question Input -->
+            <div class="flex gap-4 items-center">
+                <input type="text" id="questionInput"
+                    class="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ask a question about the market analysis...">
+                <button id="sendQuestion" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+                    Send
+                </button>
+                <!-- Style selector will be injected by JS -->
+            </div>
+
+            <!-- Error Section -->
+            <div id="errorSection" class="hidden mt-4">
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
